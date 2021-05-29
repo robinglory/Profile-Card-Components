@@ -1,0 +1,134 @@
+main {
+   height: 100vh;
+   background-color: var(--dark-cyan);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   font-family: var(--fnt-family);
+   font-weight: var(--fs-normal);
+   position: relative;
+   overflow: hidden;
+}
+
+.bg-svg-top, .bg-svg-bottom {
+   position: absolute;
+   z-index: 0;
+   width: 600px;
+   height: auto;
+}
+
+.bg-svg-top {
+   top: 0;
+   left: 0;
+   transform: translateX(-50%) translateY(-50%);
+}
+
+.bg-svg-bottom {
+   bottom: 0;
+   right: 0;
+   transform: translateX(50%) translateY(50%);
+}
+
+.container {
+   width: 20.3125rem;
+   box-shadow: 0 30px 30px 5px rgba(0,0,0,0.1);
+   border-radius: 15px;
+}
+
+.top, .mid, .bottom {
+   width: 100%;
+   height: 8.4rem;
+}
+
+.mid, .bottom {
+   background-color: white;
+}
+
+.top {
+   
+   background-image: url(./images/bg-pattern-card.svg);
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+   position: relative;
+}
+
+
+.user-photo {
+   border-radius: 50%;
+   border: solid 5px white;
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%) translateY(50%);
+   z-index: 2;
+}
+
+
+
+h2 {
+   font-weight: bold;
+   font-size: var(--fs-bold);
+}
+
+h3 {
+   color: var(--grayish-blue);
+}
+
+.mid {
+   position: relative;
+   height: 9.375rem;
+}
+
+.mid-container {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   text-align: center;
+}
+
+.mid-container > h2 {
+   margin-bottom: 0.75rem;
+   letter-spacing: 0.0625rem;
+}
+
+.mid-container > h3 {
+   letter-spacing: 0.0625rem;
+   font-size: 1rem;
+}
+
+span {
+   font-weight: normal;
+   color: var(--grayish-blue);
+}
+
+.bottom {
+   border-top: solid 1px rgb(201, 201, 201);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   height: 5.125rem;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   position: relative;
+}
+
+.stat > h3 {
+   font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 1399px) {
+   .bg-svg-top, .bg-svg-bottom {
+       width: 1800px;
+       height: auto;
+   }
+
+   .bg-svg-top {
+       transform: translateX(-20%) translateY(-60%);
+   }
+   
+   .bg-svg-bottom {
+       transform: translateX(20%) translateY(60%);
+   }
+}
